@@ -4,7 +4,8 @@
 var mongoose   = require('mongoose'),
 	express    = require('express'),
 	bodyParser = require('body-parser'),
-	path       = require('path');
+	path       = require('path'),
+	routes 	   = require('./routes.js');
 
 
 //Express setup
@@ -28,12 +29,9 @@ mongoose.connection.on( 'error', function( error ) {
 	console.log( 'error' + error );
 });
 
+routes.load(app);
+
 //Start server
 app.listen( app.get( 'port' ),function() {
 	console.log( 'Listening on port: ' + app.get( 'port' ));
-});
-
-app.get('/test', function(req,res){
-	res.send({message:'hello world!'});
-
 });
