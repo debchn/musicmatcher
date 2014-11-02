@@ -5,7 +5,7 @@ var mongoose   = require('mongoose'),
 	express    = require('express'),
 	bodyParser = require('body-parser'),
 	path       = require('path'),
-	routes 	   = require('./routes.js');
+	routes 	   = require('./api/routes.js');
 
 
 //Express setup
@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use( bodyParser.json() );
+app.use( express.static( path.join( __dirname, 'app' ) ) );
 
 //Database Connection
 mongoose.connect( process.env.MONGODB_URL );
