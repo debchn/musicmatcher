@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/debchn/musicmatcher/issues"
   },
-  "homepage": "https://github.com/debchn/musicmatcher"
+  "homepage": "https://github.com/debchn/musicmatcher",
+  "devDependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.1",
+    "mongoose": "^3.8.18",
+    "path": "^0.4.9"
+  }
 }
