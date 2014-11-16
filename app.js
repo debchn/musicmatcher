@@ -18,17 +18,17 @@ app.use( bodyParser.json() );
 app.use( express.static( path.join( __dirname, 'app' ) ) );
 
 //Database Connection
-mongoose.connect( process.env.MONGODB_URL );
+// mongoose.connect( process.env.MONGODB_URL );
 
 
-mongoose.connection.on( 'connected',function() {
-	console.log( 'Connection successful' );
+// mongoose.connection.on( 'connected',function() {
+// 	console.log( 'Connection successful' );
 
-});
+// });
 
-mongoose.connection.on( 'error', function( error ) {
-	console.log( 'error' + error );
-});
+// mongoose.connection.on( 'error', function( error ) {
+// 	console.log( 'error' + error );
+// });
 
 routes.load(app);
 

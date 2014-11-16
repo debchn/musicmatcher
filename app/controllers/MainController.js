@@ -18,6 +18,9 @@ angular.module('MyApp')
 
 	$scope.addArtist = function(){
 		console.log($scope.artist);
+		Music.getArtist($scope.artist).then(function(data){
+			console.log(data);
+		});
 	}
 
 });
