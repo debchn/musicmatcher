@@ -13,12 +13,6 @@ angular.module('MyApp',['ui.router'])
 
     //Routes
     $stateProvider
-        .state( 'login', {
-            url:'/login',
-            templateUrl: 'views/login.html',
-            controller: 'LoginCtrl'
-        })
-
         .state( 'main', {
             url: '/',
             templateUrl: 'views/main.html',

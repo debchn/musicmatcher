@@ -1,6 +1,13 @@
-<h1>Most of the action happens here, {{name}}!</h1>
+<h1>Music thingy</h1>
 
-<form>
-	<input type="text" name="Name" id="" ng-model="artistName">
+<form ng-show="!hasLocation">
+	<p> Enter your location:</p>
+	<input type="text" name="Name" id="" ng-model="userLocation">
+	<button ng-click="addLocation()">Submit</button>
+</form>
+
+<form ng-show="hasLocation">
+	<p> Add an artist:</p>
+	<input type="text" name="Name" id="" ng-model="artist">
 	<button ng-click="addArtist()">Submit</button>
 </form>
