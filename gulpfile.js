@@ -1,5 +1,5 @@
 'use strict';
-// /* global require, console */
+/* global require, console */
 
 var gulp = require('gulp');
 var connect = require('gulp-connect');
@@ -11,9 +11,9 @@ var stylish = require('jshint-stylish');
 var prettify = require('gulp-html-prettify');
 var beautify = require('gulp-js-beautify');
 
-var appFiles = ['*.js', 'client/app/**/*.js', 'client/**/*.html'];
-var htmlFiles = 'client/**/*.html';
-var jsFiles = ['*.js', 'client/**/*.js'];
+var appFiles = ['*.js', 'client/app/**/*.js', 'client/app/**/*.html'];
+var htmlFiles = 'client/app/**/*.html';
+var jsFiles = ['*.js', 'client/app/**/*.js'];
 
 gulp.task('default', [], function() {
     console.log('***********************'.yellow);
@@ -50,10 +50,7 @@ gulp.task('prettify', function() {
     gulp.src(htmlFiles, {
             base: '.'
         })
-        .pipe(prettify({
-            indent_char: ' ',
-            indent_size: 2
-        }))
+        .pipe(prettify('.jsprettifyrc'))
         .pipe(gulp.dest('.'));
 });
 
@@ -61,7 +58,8 @@ gulp.task('prettify', function() {
 gulp.task('jshint', function() {
     gulp.src(jsFiles)
         .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter(stylish));
+        .pipe(jshint.reporter(stylish))
+        .pipe(jshint.reporter('fail'));
 });
 
 
