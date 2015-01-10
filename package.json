@@ -18,8 +18,20 @@
   "homepage": "https://github.com/debchn/musicmatcher",
   "devDependencies": {
     "body-parser": "^1.9.2",
+    "colors": "^1.0.3",
+    "connect": "^3.3.4",
     "express": "^4.10.1",
+    "gulp": "^3.8.10",
+    "gulp-beautify": "^1.1.1",
+    "gulp-connect": "^2.2.0",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-js-beautify": "0.0.2",
+    "gulp-jshint": "^1.9.0",
+    "gulp-watch": "^3.0.0",
+    "jshint-stylish": "^1.0.0",
     "mongoose": "^3.8.18",
-    "path": "^0.4.9"
+    "path": "^0.4.9",
+    "run-sequence": "^1.0.2",
+    "watch": "^0.13.0"
   }
 }
