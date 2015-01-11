@@ -58,10 +58,13 @@ gulp.task('prettify', function() {
 gulp.task('jshint', function() {
     gulp.src(jsFiles)
         .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter(stylish))
-        .pipe(jshint.reporter('fail'));
+        .pipe(jshint.reporter(stylish));
 });
 
+
+gulp.task('lint-watch', function() {
+    gulp.watch(jsFiles, ['jshint']);
+});
 
 gulp.task('watch', function() {
     watch(appFiles).pipe(connect.reload());
