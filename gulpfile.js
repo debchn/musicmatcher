@@ -11,9 +11,9 @@ var stylish = require('jshint-stylish');
 var prettify = require('gulp-html-prettify');
 var beautify = require('gulp-js-beautify');
 
-var appFiles = ['*.js', 'client/app/**/*.js', 'client/app/**/*.html'];
+var appFiles = ['*.js', 'client/app/**/*.js', 'server/**/*.js', 'client/app/**/*.html'];
 var htmlFiles = 'client/app/**/*.html';
-var jsFiles = ['*.js', 'client/app/**/*.js'];
+var jsFiles = ['*.js', 'server/**/*.js', 'client/app/**/*.js'];
 
 gulp.task('default', [], function() {
     console.log('***********************'.yellow);
