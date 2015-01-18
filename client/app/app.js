@@ -11,7 +11,5 @@ angular.module('musicMatcher', ['ui.router'])
                 templateUrl: 'app/home/home.html',
                 controller: 'HomeCtrl as homeCtrl'
             });
-
-
-
-    });
+    })
+    .value('API_ROOT', 'http://localhost:8080/api/');
