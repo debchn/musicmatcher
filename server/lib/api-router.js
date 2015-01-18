@@ -11,6 +11,10 @@ var routes = [{
     method: 'GET',
     endpoint: 'test',
     handler: mock.getTest
+}, {
+    method: 'GET',
+    endpoint: 'genre',
+    handler: mock.getArtistsForGenre
 }];
 
 //wrap the interface promise based function in an express endpoint
