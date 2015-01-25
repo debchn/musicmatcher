@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('musicMatcher')
     .factory('login', function($http, API_ROOT) {
         var service = {};
@@ -6,4 +8,4 @@ angular.module('musicMatcher')
             return $http.post(API_ROOT + 'login');
         };
         return service;
-    })
+    });
