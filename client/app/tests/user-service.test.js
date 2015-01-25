@@ -3,7 +3,7 @@
 
 'use strict';
 
-describe('service: ', function() {
+describe('user service:', function() {
 
     beforeEach(module('musicMatcher'));
 
