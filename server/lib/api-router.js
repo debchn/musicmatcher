@@ -9,12 +9,12 @@ var _ = require('lodash');
 //mock to be supported by the api
 var routes = [{
     method: 'GET',
-    endpoint: 'test',
-    handler: mock.getTest
-}, {
-    method: 'GET',
     endpoint: 'genre',
     handler: mock.getArtistsForGenre
+}, {
+    method: 'POST',
+    endpoint: 'login',
+    handler: mock.login
 }];
 
 //wrap the interface promise based function in an express endpoint
