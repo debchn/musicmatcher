@@ -2,11 +2,11 @@
 var mock = module.exports;
 var q = require('q');
 
-mock.getTest = function(req) {
+mock.login = function(req) {
     return q.when({
         status: 200,
         data: {
-            msg: 'Hello World'
+            user: 'Wisam'
         }
     });
 };

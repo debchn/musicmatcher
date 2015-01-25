@@ -9,15 +9,15 @@ angular.module('musicMatcher')
             user.getArtists(homeCtrl.genre).then(function(resp) {
                 var artist = resp;
                 homeCtrl.artist = {
-                  name: artist.name,
-                  img: artist.img
-                 };
+                    name: artist.name,
+                    img: artist.img
+                };
             });
 
         };
 
-        homeCtrl.addArtist = function(){
-          homeCtrl.artist = user.addArtist();
+        homeCtrl.addArtist = function() {
+            homeCtrl.artist = user.addArtist();
         };
 
         homeCtrl.nextArtist = function() {
