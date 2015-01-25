@@ -16,17 +16,19 @@ var karma = require('gulp-karma');
 var appFiles = ['*.js', 'client/app/**/*.js', 'server/**/*.js', 'client/app/**/*.html'];
 var htmlFiles = 'client/app/**/*.html';
 var jsFiles = ['*.js', 'server/**/*.js', 'client/app/**/*.js'];
-var karmaFiles = appFiles[1];
 
 var karmaVendorFiles = [
     'client/bower_components/q/q.js',
     'client/bower_components/angular/angular.js',
     'client/bower_components/angular-ui-router/release/angular-ui-router.min.js',
     'client/bower_components/angular-mocks/angular-mocks.js',
-    'client/bower_components/sinon-chai/lib/sinon-chai.js',
-    'client/app/**/*.js'
+    'client/bower_components/sinon-chai/lib/sinon-chai.js'
 ];
 
+function getAllKarmaFiles() {
+    return karmaVendorFiles.concat(appFiles[1]);
+
+}
 
 
 gulp.task('default', [], function() {
@@ -38,7 +40,7 @@ gulp.task('default', [], function() {
 });
 
 gulp.task('karma-ci', function() {
-    return gulp.src(karmaVendorFiles)
+    return gulp.src(getAllKarmaFiles())
         .pipe(karma({
             configFile: 'test/unit/karma-ci.conf.js',
             action: 'run'
@@ -49,7 +51,7 @@ gulp.task('karma-ci', function() {
 });
 
 gulp.task('karma-watch', function() {
-    gulp.src(karmaVendorFiles)
+    gulp.src(getAllKarmaFiles())
         .pipe(karma({
             configFile: 'test/unit/karma-ci.conf.js',
             action: 'watch'
