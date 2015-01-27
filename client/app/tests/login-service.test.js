@@ -17,6 +17,8 @@ describe('login service:', function() {
     it('should exist', function() {
         expect(login).to.be.an('object');
         expect(login.authenticate).to.be.a('function');
+        expect(Object.keys(login).length).to.equal(1);
+
     });
 
 
