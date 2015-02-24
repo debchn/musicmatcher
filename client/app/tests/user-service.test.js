@@ -26,7 +26,7 @@ describe('user service:', function() {
         expect(Object.keys(user).length).to.equal(7);
     });
 
-    it('should getArtist',function(){
+    it('should getArtist', function() {
 
     });
 

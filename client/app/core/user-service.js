@@ -26,14 +26,14 @@ angular.module('musicMatcher')
             return list;
         };
 
-        service.update = function(variable,value){
+        service.update = function(variable, value) {
             variable = value;
 
         }
 
         //update list
         service.updateList = function(updatedList) {
-            update(list,updatedList);
+            update(list, updatedList);
             return list;
         };
 
