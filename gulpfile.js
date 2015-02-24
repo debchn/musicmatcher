@@ -72,8 +72,6 @@ gulp.task('devServer', function() {
 
 gulp.task('inject', function() {
     var target = gulp.src('client/index.html');
-    //  .pipe(inject(gulp.src('./src/**/*.js', {read: false}), {relative: true}))
-
     var sources = gulp.src([jsFiles[2]], {
         read: false
     });
