@@ -62,4 +62,5 @@ angular.module('musicMatcher', ['ionic', 'musicMatcher.controllers', 'musicMatch
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
 
-});
+})
+.value('API_ROOT', 'http://localhost:8080/api/');
