@@ -1,24 +1,7 @@
 {
-  "name": "musicmatcher",
-  "version": "0.0.0",
-  "homepage": "https://github.com/debchn/musicmatcher",
-  "authors": [
-    "wzaghal <wisamzaghal@gmail.com>"
-  ],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "client/bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "angular": "~1.3.8",
-    "angular-ui-router": "~0.2.13",
-    "ramda": "~0.8.0",
-    "angular-mocks": "~1.3.10",
-    "sinon-chai": "~2.6.0"
+  "name": "myApp",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0-rc.1"
   }
 }
