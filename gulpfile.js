@@ -10,7 +10,6 @@ var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var prettify = require('gulp-html-prettify');
 var beautify = require('gulp-js-beautify');
-var inject = require('gulp-inject');
 var karma = require('gulp-karma');
 
 var appFiles = ['*.js', 'client/app/**/*.js', 'server/**/*.js', 'client/app/**/*.html'];
@@ -70,18 +69,6 @@ gulp.task('devServer', function() {
     });
 });
 
-gulp.task('inject', function() {
-    var target = gulp.src('client/index.html');
-    var sources = gulp.src([jsFiles[2]], {
-        read: false
-    });
-
-    return target.pipe(inject(sources, {
-            addRootSlash: false,
-            ignorePath: 'client'
-        }))
-        .pipe(gulp.dest('client'));
-});
 
 gulp.task('lint', function() {
     return runSequence('jshint', 'beautify', 'prettify');
@@ -118,10 +105,6 @@ gulp.task('lint-watch', function() {
 
 gulp.task('watch', function() {
     watch(appFiles).pipe(connect.reload());
-
-    watch(jsFiles, function() {
-        gulp.start(['inject']);
-    });
 
 });
 
