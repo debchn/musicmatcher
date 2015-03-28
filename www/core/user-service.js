@@ -1,7 +1,7 @@
 'use strict';
 
 //Trying to use a functional programming approach
-angular.module('musicMatcher')
+angular.module('musicMatcher.services',[])
     .factory('user', function(API_ROOT, $http) {
         var service = {};
         var list = [];

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('musicMatcher')
+angular.module('musicMatcher.services',[])
     .factory('login', function($http, API_ROOT) {
         var service = {};
 
